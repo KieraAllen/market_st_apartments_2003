@@ -6,8 +6,10 @@ class Apartment
               :bedrooms
 
   def initialize(apartment)
+    @apartment = apartment
     @number = apartment[:number]
     @monthly_rent = apartment[:monthly_rent]
-    @apartment = apartment
+    @bathrooms = apartment[:bathrooms]
+    @bedrooms = apartment[:bedrooms]
   end
 end
