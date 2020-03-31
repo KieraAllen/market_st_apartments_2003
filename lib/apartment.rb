@@ -1,5 +1,3 @@
-require './lib/renter'
-
 class Apartment
   attr_reader :apartment,
               :number,
