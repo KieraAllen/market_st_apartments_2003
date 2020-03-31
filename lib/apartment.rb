@@ -1,9 +1,12 @@
+require './lib/renter'
+
 class Apartment
   attr_reader :apartment,
               :number,
               :monthly_rent,
               :bathrooms,
-              :bedrooms
+              :bedrooms,
+              :renter
 
   def initialize(apartment)
     @apartment = apartment
@@ -11,5 +14,6 @@ class Apartment
     @monthly_rent = apartment[:monthly_rent]
     @bathrooms = apartment[:bathrooms]
     @bedrooms = apartment[:bedrooms]
+    @renter = nil
   end
 end
