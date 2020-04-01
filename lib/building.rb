@@ -1,3 +1,5 @@
+require './lib/apartment'
+
 class Building
   attr_reader :units,
               :renters
@@ -12,11 +14,9 @@ class Building
   end
 
   def renters
-    unit.renter = units.map do |unit|
-      # unit.renter == [renter]
-      renters.push(renter)
-      end
-      @renters
+    units.map do |unit|
+      @renters << unit.renter
     end
+    @renters
   end
 end

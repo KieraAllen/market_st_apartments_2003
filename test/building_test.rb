@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/renter'
-require './lib/apartment'
 require './lib/building'
 
 class BuildingTest < Minitest::Test
@@ -42,7 +41,7 @@ class BuildingTest < Minitest::Test
 
     unit1.add_renter(renter1)
     building.add_unit(unit1)
-    
+
     assert_equal ["Aurora"], building.renters
   end
 
